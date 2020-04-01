@@ -1,30 +1,37 @@
-## ¿ª·¢
+# MyBlogVue
+
+> è¿™æ˜¯ä¸€åŸºäºè‹¥ä¾å¼€å‘çš„ä¸ªäººåšå®¢ç®¡ç†åå°ã€‚
+å‚è€ƒ[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+å‚è€ƒ[http://www.ruoyi.vip/](http://www.ruoyi.vip/)
+
+> [çº¿ä¸Šåœ°å€](http://lurenpeng.cn:8088/)
+## å¼€å‘
 
 ```bash
-# ¿ËÂ¡ÏîÄ¿
+# å…‹éš†é¡¹ç›®
 git clone https://gitee.com/y_project/RuoYi-Vue
 
-# ½øÈëÏîÄ¿Ä¿Â¼
+# è¿›å…¥é¡¹ç›®ç›®å½•
 cd ruoyi-ui
 
-# °²×°ÒÀÀµ
+# å®‰è£…ä¾èµ–
 npm install
 
-# ½¨Òé²»ÒªÖ±½ÓÊ¹ÓÃ cnpm °²×°ÒÀÀµ£¬»áÓĞ¸÷ÖÖ¹îÒìµÄ bug¡£¿ÉÒÔÍ¨¹ıÈçÏÂ²Ù×÷½â¾ö npm ÏÂÔØËÙ¶ÈÂıµÄÎÊÌâ
+# å»ºè®®ä¸è¦ç›´æ¥ä½¿ç”¨ cnpm å®‰è£…ä¾èµ–ï¼Œä¼šæœ‰å„ç§è¯¡å¼‚çš„ bugã€‚å¯ä»¥é€šè¿‡å¦‚ä¸‹æ“ä½œè§£å†³ npm ä¸‹è½½é€Ÿåº¦æ…¢çš„é—®é¢˜
 npm install --registry=https://registry.npm.taobao.org
 
-# Æô¶¯·şÎñ
+# å¯åŠ¨æœåŠ¡
 npm run dev
 ```
 
-ä¯ÀÀÆ÷·ÃÎÊ http://localhost:80
+æµè§ˆå™¨è®¿é—® http://localhost
 
-## ·¢²¼
+## å‘å¸ƒ
 
 ```bash
-# ¹¹½¨²âÊÔ»·¾³
+# æ„å»ºæµ‹è¯•ç¯å¢ƒ
 npm run build:stage
 
-# ¹¹½¨Éú²ú»·¾³
+# æ„å»ºç”Ÿäº§ç¯å¢ƒ
 npm run build:prod
 ```
