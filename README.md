@@ -9,7 +9,7 @@
 
 ```bash
 # 克隆项目
-git clone https://gitee.com/y_project/RuoYi-Vue
+git clone git@github.com:lurenha/MyBlogVue.git
 
 # 进入项目目录
 cd ruoyi-ui
