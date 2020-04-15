@@ -1,6 +1,6 @@
 # MyBlogVue
 
-> 这是一基于若依开发的个人博客管理后台。
+> 一个基于Vue的个人博客管理后台。
 参考[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
 参考[http://www.ruoyi.vip/](http://www.ruoyi.vip/)
 
@@ -12,7 +12,7 @@
 git clone git@github.com:lurenha/MyBlogVue.git
 
 # 进入项目目录
-cd ruoyi-ui
+cd MyBlogVue
 
 # 安装依赖
 npm install
