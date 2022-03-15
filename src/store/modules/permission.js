@@ -48,7 +48,9 @@ function filterAsyncRouter(asyncRouterMap) {
 }
 
 export const loadView = (view) => { // 路由懒加载
-  return () => import(`@/views/${view}`)
+  // return () => import(`@/views/${view}`)
+  //Vue配置动态路由报错：Error: Cannot find module ‘@/views/login/index’
+  return (resolve) => require([`@/views/${view}`], resolve)
 }
 
 export default permission
