@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form">
-      <h3 class="title">若依后台管理系统</h3>
+      <h3 class="title">Blog后台管理系统</h3>
       <el-form-item prop="username">
         <el-input v-model="loginForm.username" type="text" auto-complete="off" placeholder="账号">
           <svg-icon slot="prefix" icon-class="user" class="el-input__icon input-icon" />
@@ -33,6 +33,8 @@
         </div>
       </el-form-item>
       <el-checkbox v-model="loginForm.rememberMe" style="margin:0px 0px 25px 0px;">记住密码</el-checkbox>
+      <span style="line-height: 24px;font-size: 14px;font-weight: 400;color: #999aaa;margin-left: 30%;">其他方式登录:</span>
+      <svg-icon icon-class="github"  @click="goto('https://github.com/login/oauth/authorize?client_id=6043d264a1205877dc03&redirect_uri=http%3A%2F%2Flurenpeng.cn%2Fpeng%2Foauth%2Flogin')"/>
       <el-form-item style="width:100%;">
         <el-button
           :loading="loading"
@@ -57,7 +59,7 @@
 import { getCodeImg } from "@/api/login";
 import Cookies from "js-cookie";
 import { encrypt, decrypt } from '@/utils/jsencrypt'
-
+import { getToken, setToken, removeToken } from '@/utils/auth'
 export default {
   name: "Login",
   data() {
@@ -87,6 +89,12 @@ export default {
   watch: {
     $route: {
       handler: function(route) {
+        if(route.query.pengToken){
+          console.log("OAuth登录,跳转至首页...");
+          setToken(route.query.pengToken)
+          this.$router.push({ path: "index" });
+        }
+        
         this.redirect = route.query && route.query.redirect;
       },
       immediate: true
@@ -97,6 +105,9 @@ export default {
     this.getCookie();
   },
   methods: {
+    goto(e) {
+      window.open(e)
+    },
     getCode() {
       getCodeImg().then(res => {
         this.codeUrl = "data:image/gif;base64," + res.img;
