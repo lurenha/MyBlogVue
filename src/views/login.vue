@@ -34,6 +34,7 @@
       </el-form-item>
       <el-checkbox v-model="loginForm.rememberMe" style="margin:0px 0px 25px 0px;">记住密码</el-checkbox>
       <span style="line-height: 24px;font-size: 14px;font-weight: 400;color: #999aaa;margin-left: 30%;">其他方式登录:</span>
+      <svg-icon icon-class="gitee"  @click="goto('https://gitee.com/oauth/authorize?client_id=88d12fc8af4eebc842393a82c61ac72c65625436aa082b8cf953c6d26aed6053&redirect_uri=http%3A%2F%2Flurenpeng.cn%2Fpeng%2Foauth%2Flogin%2Fgitee&response_type=code')"/>
       <svg-icon icon-class="github"  @click="goto('https://github.com/login/oauth/authorize?client_id=6043d264a1205877dc03&redirect_uri=http%3A%2F%2Flurenpeng.cn%2Fpeng%2Foauth%2Flogin')"/>
       <el-form-item style="width:100%;">
         <el-button
